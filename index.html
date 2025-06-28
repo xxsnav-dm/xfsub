@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旋风动漫分享站官网入口 - 最新热门动漫、漫画、片源资源下载</title>
+  <meta name="keywords" content="动漫下载,漫画下载,片源下载,动画,漫画,旋风动漫">
+  <meta name="description" content="旋风动漫分享站为您提供最新热门的日本动画、漫画、片源等资源下载。无论是热门番剧还是经典动画电影，都能在这里找到。同时，丰富的漫画资源和片源资源也能满足您的阅读和观影需求。">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { darkMode: `class` }
+  </script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./ico.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>
+    // 自定义Tailwind配置
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#E50914', // 红色主色调
+                    secondary: '#FF6B6B', // 浅红色辅助色
+                    neutral: {
+                        100: '#F8F9FA',
+                        200: '#E9ECEF',
+                        700: '#343A40',
+                        800: '#212529',
+                        900: '#121212'
+                    }
+                },
+                fontFamily: {
+                    inter: ['Inter', 'system-ui', 'sans-serif'],
+                },
+            }
+        }
+    }
+  </script>
+  <style type="text/tailwindcss"> @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+            .feature-card {
+                @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .resource-card {
+                @apply bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+            }
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeIn 0.8s ease forwards;
+            }
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen font-inter bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <div class="container mx-auto px-4 py-8 max-w-7xl">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex-shrink-0 flex items-center">
+              <span class="text-primary font-bold text-xl">旋风动漫分享站</span>
+            </a>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a href="#about" class="border-b-2 border-primary px-1 pt-1 text-sm font-medium text-primary">网站介绍</a>
+              <a href="#features" class="border-transparent hover:border-primary px-1 pt-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary">功能特点</a>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" id="themeToggle">
+              <i class="fas fa-moon-o text-gray-500 dark:text-yellow-400"></i>
+            </button>
+            <button class="ml-4 block sm:hidden p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700" id="mobile-menu-button">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 移动端菜单 -->
+      <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="pt-2 pb-3 space-y-1 px-4">
+          <a href="#about" class="bg-primary/5 border-l-4 border-primary text-primary block pl-3 pr-4 py-2 text-base font-medium">网站介绍</a>
+          <a href="#features" class="border-l-4 border-transparent hover:border-primary hover:bg-primary/5 text-gray-600 dark:text-gray-300 hover:text-primary block pl-3 pr-4 py-2 text-base font-medium">功能特点</a>
+        </div>
+      </div>
+    </nav>
+    <header class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24 pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">旋风动漫分享站</h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90"> 最新热门动漫、漫画、片源资源下载</p>
+          <div class="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+            <a class="bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-transform font-medium py-3 px-6 rounded-lg shadow-lg" href="https://www.xxsnav.com/sites/15967.html" target="_blank">
+              <i class="fas fa-external-link-alt mr-2"></i>访问官网 </a>
+            <a class="bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-transform font-medium py-3 px-6 rounded-lg shadow-lg" href="https://wangpanziyuan.pages.dev/" target="_blank" content="nofollow">
+              <i class="fas fa-external-link-alt mr-2"></i>电子书/电影/音乐/漫画/游戏下载 </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+    </header>
+    <!-- 增加隔离空间 -->
+    <div class="h-5 md:h-10"></div>
+    <!-- 网站介绍部分 -->
+    <section id="about" class="mb-16 fade-in" style="animation-delay: 0.4s">
+      <h2 class="text-2xl font-bold mb-8">网站介绍</h2>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+        <div>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"> 旋风动漫分享站是一个专注于为动漫爱好者提供丰富资源的综合性平台。它汇聚了最新热门的日本动画、漫画、片源、动漫音乐以及动漫游戏等资源，无论是狂热的动漫粉丝还是刚入门的新手，都能在这里找到心仪的宝藏。该网站不仅提供动画资源，还涵盖了漫画、音乐和游戏等多个领域，满足了不同用户的需求。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 功能特点部分 -->
+    <section id="features" class="mb-16 fade-in" style="animation-delay: 0.6s">
+      <h2 class="text-2xl font-bold mb-8">功能特点</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">最新热门动漫一网打尽</h3>
+          <p class="text-gray-600 dark:text-gray-300">旋风动漫分享站汇聚了海量最新热门的日本动画资源，包括各类热门番剧和经典动画电影。无论是治愈系的日常生活动画，还是充满激情的战斗场面，亦或是奇幻世界的冒险故事，用户都能轻松找到。该网站致力于实时更新，确保用户能够第一时间观看到最新的动漫作品。 </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">丰富多彩的漫画资源</h3>
+          <p class="text-gray-600 dark:text-gray-300"> 除了动画资源，旋风动漫还提供丰富多样的漫画资源，涵盖各种题材和风格。从轻松搞笑的四格漫画到惊险刺激的冒险漫画，再到感人至深的爱情漫画，应有尽有。用户可以根据自己的喜好选择阅读，沉浸在漫画的世界中。</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">片源一应俱全，畅享观影乐趣</h3>
+          <p class="text-gray-600 dark:text-gray-300">旋风动漫分享站不仅提供动画和漫画资源，还汇集了丰富的片源资源，包括电影、电视剧等。用户可以在这里找到各类优质片源，尽情享受观影的乐趣，无需担心版权问题。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 rounded-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex items-center justify-center mb-6">
+          <span class="text-primary font-bold text-xl">旋风动漫分享站</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 text-sm"> &copy; 2025 旋风动漫分享站. 保留所有权利. </p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow-md');
+            navbar.classList.remove('shadow-sm');
+        } else {
+            navbar.classList.remove('shadow-md');
+            navbar.classList.add('shadow-sm');
+        }
+    });
+    
+    // 移动端菜单切换
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 暗色模式切换
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        
+        // 切换图标
+        const icon = this.querySelector('i');
+        if (document.documentElement.classList.contains('dark')) {
+            icon.classList.remove('fa-moon-o');
+            icon.classList.add('fa-sun-o');
+        } else {
+            icon.classList.remove('fa-sun-o');
+            icon.classList.add('fa-moon-o');
+        }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // 关闭移动端菜单
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
+        });
+    });
+    
+    // 元素进入视口时的淡入效果
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+        fadeInObserver.observe(element);
+    });
+  </script>
+</body>
+</html>
